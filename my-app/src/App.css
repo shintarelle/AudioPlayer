@@ -36,3 +36,77 @@
     transform: rotate(360deg);
   }
 }
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  background-color: #d3f2fb;
+}
+.library {
+  max-width: 500px;
+  padding: 3rem;
+  border: 1px solid rgb(36, 50, 57);
+}
+.audioplayer {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.audio-image {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 5%;
+}
+.wrapper-time {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+}
+.time-line {
+  width: 40rem;
+  height: 5px;
+  background-color: rgb(237, 237, 237);
+  border: 1px solid rgb(154, 153, 153);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+.play-stop-panel {
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+}
+.button-play {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(204, 204, 204, 0.3);
+}
+.play {
+  scale: 2;
+  width: 3rem;
+  font-size: 10px;
+}
+
+.librarylist {
+  padding: 0;
+}
+.library-label {
+  font-size: 30px;
+  line-height: 15px;
+}
+.track-li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.track-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10%;
+}

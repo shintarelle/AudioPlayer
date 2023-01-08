@@ -7,13 +7,18 @@ export default function App() {
   const { current, setTrackByID, nextTrack, prewTrack } = useListController();
 
   return (
-    <>
-      <Library currentTrack={current} setTrackByID={setTrackByID} />
-      <AudioPlayer
+    <div className="wrapper">
+      <div className="library">
+        <Library currentTrack={current} setTrackByID={setTrackByID} />
+      </div>
+      <div className="audioplayer">
+        <AudioPlayer
         currentTrack={current}
         nextTrack={nextTrack}
         prewTrack={prewTrack}
-      />
-    </>
+        />
+      </div>
+
+    </div>
   );
 }

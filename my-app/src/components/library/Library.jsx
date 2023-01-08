@@ -6,10 +6,10 @@ const Library = () => {
   const chillHop = useChillHop();
   return (
     <>
-      Library
-      <ul>
+      <p className="library-label">Library</p>
+      <ul className="librarylist">
         {chillHop.map((c) => (
-          <TrackItem key={c.id} name={c.name} />
+          <TrackItem key={c.id} name={c.name} cover={c.cover} />
         ))}
       </ul>
     </>

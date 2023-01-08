@@ -9,6 +9,7 @@ const AudioPlayer = ({ currentTrack }) => {
   const current = useChillHop()[currentTrack];
   const AudioRef = useRef(new Audio(current.audio));
 
+  const trackImage = useChillHop()[currentTrack].cover;
 
   const intervalRef = useRef(null);
 
@@ -46,6 +47,8 @@ const AudioPlayer = ({ currentTrack }) => {
 
   return (
     <>
+      <img className="audio-image" src={trackImage}></img>
+
       <AudioController
         isPlaing={isPlaing}
         onToglePlay={toggleHandler}
