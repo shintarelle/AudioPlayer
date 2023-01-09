@@ -9,8 +9,6 @@ const AudioPlayer = ({ currentTrack }) => {
   const current = useChillHop()[currentTrack];
   const AudioRef = useRef(new Audio(current.audio));
 
-  const trackImage = useChillHop()[currentTrack].cover;
-
   const intervalRef = useRef(null);
 
   //   const interval = setInterval(() => {
@@ -47,7 +45,11 @@ const AudioPlayer = ({ currentTrack }) => {
 
   return (
     <>
-      <img className="audio-image" src={trackImage}></img>
+      <img className="audio-image" src={current.cover}></img>
+      <span className="audio-name">{current.name} -
+        <span className="audio-artist">  {current.artist}</span>
+      </span>
+
 
       <AudioController
         isPlaing={isPlaing}

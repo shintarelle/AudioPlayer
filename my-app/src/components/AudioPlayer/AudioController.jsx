@@ -9,21 +9,19 @@ const AudioController = ({isPlaing, onToglePlay, duration, currentTime}) => {
             <div>
                 {secondToMinutes(currentTime)}
             </div>
-
             <div>
                 {secondToMinutes(duration)}
             </div>
-
-            </div>
-            <div className="time-line"></div>
+        </div>
+        <div className="time-line"></div>
         <div className="play-stop-panel">
-            <button className="button-play">
+            <button className="button">
                 Prev
             </button>
-            <button className="button-play play" onClick={onToglePlay}>
-                {isPlaing? 'Pause': "Play"}
+            <button className="button play" onClick={onToglePlay}>
+                {isPlaing? 'Pause' : "Play"}
             </button>
-            <button className="button-play">
+            <button className="button">
                 Next
             </button>
         </div>
