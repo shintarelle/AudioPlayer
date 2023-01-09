@@ -24,9 +24,10 @@ const AudioPlayer = ({ currentTrack }) => {
     console.log('play')
     AudioRef.current.play();
     intervalRef.current = setInterval(() => {
-        console.log('currentTime', currentTime,  intervalRef.current)
-        setCurrentTime((c) => c + 1 );
-      }, 1000)
+      console.log('currentTime', currentTime, intervalRef.current, AudioRef.current.duration)
+      setCurrentTime((c) =>  c + 1);
+    }, 1000)
+
   };
 
   const pause = () => {
@@ -42,6 +43,15 @@ const AudioPlayer = ({ currentTrack }) => {
       pause();
     }
   }, [isPlaing]);
+
+  useEffect(() => {
+    if (currentTime === Math.trunc(AudioRef.current.duration)) {
+      console.log('end')
+      setCurrentTime((c) => 0);
+      pause();
+      setIsPlaing(!isPlaing);
+    }
+  }, [currentTime]);
 
   return (
     <>

@@ -1,5 +1,4 @@
 const TrackItem = ({ name, cover }) => {
-    console.log(name, cover)
     return (
         <li className="track-li">
             <div className="track-item">

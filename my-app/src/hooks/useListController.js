@@ -14,4 +14,4 @@ const useListController = () => {
 }
 
 
-export default useListController
+export default useListController;
