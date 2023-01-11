@@ -1,24 +1,24 @@
-import React from "react";
+import React, { createContext } from "react";
 import Library from "./components/library/Library";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 import useListController from "./hooks/useListController";
+import useChillHop from "./API/useChillHop";
+import { AudioListContext } from "./context/AudioListContext";
+
+
 
 export default function App() {
-  const { current, setTrackByID, nextTrack, prewTrack } = useListController();
+  const chillHop = useChillHop();
+  const controller = useListController(chillHop);
 
   return (
-    <div className="wrapper">
-      <div className="library">
-        <Library currentTrack={current} setTrackByID={setTrackByID} />
-      </div>
-      <div className="audioplayer">
+    <AudioListContext.Provider value = {controller}>
+      <div className="wrapper">
+        <Library  />
         <AudioPlayer
-        currentTrack={current}
-        nextTrack={nextTrack}
-        prewTrack={prewTrack}
         />
       </div>
+    </AudioListContext.Provider>
 
-    </div>
   );
 }
