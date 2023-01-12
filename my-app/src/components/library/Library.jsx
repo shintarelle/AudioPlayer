@@ -7,7 +7,12 @@ import TrackItem from "./TrackItem";
 const Library = () => {
   const chillHop = useChillHop();
 
-  const { currentId } = useContext(AudioListContext);
+  const { currentId, setTrackByID } = useContext(AudioListContext);
+
+  const handlerChoiseTrack = (id) => {
+    console.log(id)
+    setTrackByID(id)
+  }
 
   return (
     <>
@@ -15,7 +20,8 @@ const Library = () => {
         <p className="library-label">Library</p>
         <ul className="librarylist">
           {chillHop.map((c) => (
-            <TrackItem key={c.id} name={c.name} cover={c.cover} isActive={currentId === c.id} />
+            <TrackItem key={c.id} name={c.name} cover={c.cover} isActive={currentId === c.id} id={c.id}
+              choiseTrack={handlerChoiseTrack}/>
           ))}
         </ul>
       </div>

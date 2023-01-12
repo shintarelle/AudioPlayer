@@ -42,9 +42,10 @@ const AudioPlayer = () => {
 
   const handlerScrub = (value) => {
     console.log('in handlerScrub value', value)
-    clearInterval(intervalRef.current);
+    // clearInterval(intervalRef.current);
     AudioRef.current.currentTime = value;
-    setCurrentTime(value);
+    console.log(AudioRef.current.currentTime)
+    setCurrentTime(AudioRef.current.currentTime);
 
   //   clearInterval(intervalRef.current);
   //   audioRef.current.currentTime = value;
@@ -83,7 +84,7 @@ const AudioPlayer = () => {
   return (
     <>
       <div className="audioplayer">
-        <img className="audio-image" src={current.cover}></img>
+        <img className="audio-image" src={current.cover} alt=""></img>
         <span className="audio-name">{current.name} -
         <span className="audio-artist">  {current.artist}</span>
         </span>

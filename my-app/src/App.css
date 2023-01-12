@@ -44,7 +44,7 @@
 .library {
   max-width: 500px;
   padding: 3rem;
-  border: 1px solid rgb(36, 50, 57);
+  border: 1px solid #243239;
 }
 .audioplayer {
   width: 100%;
@@ -82,8 +82,10 @@
 .button {
   width: 5rem;
   height: 2rem;
-  border-radius: 0.5rem;
-  background-color: rgb(204, 204, 204, 0.3);
+  border: none;
+  /* border-radius: 0.5rem; */
+  background-color: rgb(204, 204, 204, 0);
+  font-size: 18px;
 }
 .play {
   scale: 2;
@@ -100,10 +102,10 @@
 }
 .track-li {
   list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 1rem;
+  padding-left: 0px;
 }
 .track-item {
+  padding: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
