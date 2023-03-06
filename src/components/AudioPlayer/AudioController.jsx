@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { secondToMinutes } from "../../Utils";
+import { secondToMinutes } from "../../utils";
 import { AudioListContext } from "../../context/AudioListContext";
 import { ReactComponent as Play } from "../svg/play.svg";
 import { ReactComponent as Pause } from "../svg/pause.svg";
